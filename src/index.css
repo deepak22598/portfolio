@@ -1,0 +1,83 @@
+:root {
+  --bg: #0f1419;
+  --bg-elevated: #1a222c;
+  --bg-card: #161d26;
+  --text: #e6edf3;
+  --text-muted: #8b9cad;
+  --accent: #22c4b9;
+  --accent-dim: rgba(34, 196, 185, 0.15);
+  --border: #2d3a47;
+  --font-heading: 'Outfit', system-ui, sans-serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --section-padding: clamp(3rem, 8vw, 5rem);
+  --container: min(1100px, 92vw);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+h3 { font-size: 1.25rem; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: #2ee0d6;
+}
+
+section {
+  padding: var(--section-padding) 0;
+}
+
+.container {
+  width: var(--container);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-title {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
